@@ -14,5 +14,26 @@
   		<artifactId>hama-graph</artifactId>
   		<version>0.6.4</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.apache.hama</groupId>
+  		<artifactId>hama-commons</artifactId>
+  		<version>0.6.4</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.hama</groupId>
+  		<artifactId>hama-yarn</artifactId>
+  		<version>0.6.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.hama</groupId>
+  		<artifactId>hama-dist</artifactId>
+  		<version>0.6.4</version>
+  		<type>pom</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.hama</groupId>
+  		<artifactId>hama-examples</artifactId>
+  		<version>0.6.4</version>
+  	</dependency>
   </dependencies>
 </project>
