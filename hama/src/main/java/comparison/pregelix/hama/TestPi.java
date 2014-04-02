@@ -1,4 +1,4 @@
-package hama;
+package comparison.pregelix.hama;
 
 import java.io.IOException;
 
