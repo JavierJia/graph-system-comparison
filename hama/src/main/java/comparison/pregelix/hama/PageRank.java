@@ -15,8 +15,10 @@ import org.apache.hama.bsp.TextOutputFormat;
 import org.apache.hama.graph.AverageAggregator;
 import org.apache.hama.graph.Edge;
 import org.apache.hama.graph.GraphJob;
+import org.apache.hama.graph.ListVerticesInfo;
 import org.apache.hama.graph.Vertex;
 import org.apache.hama.graph.VertexInputReader;
+import org.apache.hama.graph.VerticesInfo;
 
 /**
  * Real pagerank with dangling node contribution.
@@ -116,7 +118,7 @@ public class PageRank {
 
 		pageJob.setPartitioner(HashPartitioner.class);
 		pageJob.setOutputFormat(TextOutputFormat.class);
-		pageJob.setOutputKeyClass(Text.class);
+		pageJob.setOutputKeyClass(VLongWritable.class);
 		pageJob.setOutputValueClass(DoubleWritable.class);
 		return pageJob;
 	}
@@ -132,6 +134,12 @@ public class PageRank {
 			printUsage();
 
 		HamaConfiguration conf = new HamaConfiguration();
+		conf.setClass("hama.graph.vertices.info", ListVerticesInfo.class,
+				VerticesInfo.class);
+		// setting the out of disk message stuff.
+		// conf.setClass("hama.messenger.sender.queue.class", theClass, xface);
+		// conf.setClass("hama.messenger.receive.queue.class", theClass, xface);
+
 		GraphJob pageJob = createJob(args, conf);
 
 		long startTime = System.currentTimeMillis();
