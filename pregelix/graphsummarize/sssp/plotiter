@@ -1,0 +1,12 @@
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "iteration32.eps"
+
+#set title "32-Machine Cluster"
+set key left top
+set xlabel "Dataset Size / Aggregated RAM"
+set ylabel "Avg Iteration Time (Secs)"
+set xrange [0:0.16]
+set xtics 0,0.04,0.16
+set yrange [0:30]
+
+plot "iteration_32.txt" u 1:2 w lp pt 1 ps 2 title "Pregelix","iteration_32.txt" u 1:3 w lp pt 4 ps 2 title "Giraph-mem","iteration_32.txt" u 1:4 w lp pt 8 ps 2 title "Giraph-ooc"

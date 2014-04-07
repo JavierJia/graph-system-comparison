@@ -1,0 +1,11 @@
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "scaleup.eps"
+
+#set title "32-Machine Cluster"
+set xlabel "Scale (GB)"
+set ylabel "Relative Avg Iteration Time"
+set xrange [1:4]
+set yrange [0:2]
+set xtics 1,1,4
+
+plot "scaleup.txt" u 1:2 w lp pt 2 ps 2 title "Pregelix"

@@ -1,0 +1,6 @@
+#Dataset-Size Pregelix InnerJoin OuterJoin
+.020 1965 2029
+.055 1914 2133
+.071 1926 2300
+.105 2125 2454
+.130 2162 2612

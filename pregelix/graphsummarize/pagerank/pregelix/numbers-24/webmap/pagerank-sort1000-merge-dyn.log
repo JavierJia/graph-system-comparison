@@ -1,0 +1,311 @@
+Feb 12, 2014 7:57:06 PM edu.uci.ics.pregelix.core.driver.Driver installApplication
+INFO: jar deployment finished 8834ms
+Feb 12, 2014 7:57:06 PM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job started
+Feb 12, 2014 7:57:07 PM org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+INFO: Total input paths to process : 2
+Feb 12, 2014 7:57:08 PM org.apache.hadoop.util.NativeCodeLoader <clinit>
+WARNING: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Feb 12, 2014 7:57:08 PM org.apache.hadoop.io.compress.snappy.LoadSnappy <clinit>
+WARNING: Snappy native library not loaded
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: number of splits: 134
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:0+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:536870912+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:1073741824+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:1610612736+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:2147483648+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:2684354560+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:3221225472+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:3758096384+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:4294967296+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:4831838208+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:5368709120+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:5905580032+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:6442450944+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:6979321856+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:7516192768+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:8053063680+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:8589934592+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:9126805504+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:9663676416+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:10200547328+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:10737418240+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:11274289152+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:11811160064+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:12348030976+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:12884901888+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:13421772800+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:13958643712+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:14495514624+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:15032385536+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:15569256448+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:16106127360+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:16642998272+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:17179869184+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:17716740096+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:18253611008+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:18790481920+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:19327352832+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:19864223744+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:20401094656+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:20937965568+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:21474836480+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:22011707392+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:22548578304+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:23085449216+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:23622320128+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:24159191040+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:24696061952+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:25232932864+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:25769803776+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:26306674688+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:26843545600+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:27380416512+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:27917287424+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:28454158336+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:28991029248+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:29527900160+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:30064771072+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:30601641984+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:31138512896+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:31675383808+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:32212254720+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:32749125632+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:33285996544+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:33822867456+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:34359738368+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:34896609280+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:35433480192+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:35970351104+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:36507222016+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:37044092928+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:37580963840+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:38117834752+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:38654705664+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:39191576576+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:39728447488+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:40265318400+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:40802189312+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:41339060224+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:41875931136+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:42412802048+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:42949672960+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-1.txt:43486543872+528734196
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:0+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:536870912+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:1073741824+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:1610612736+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:2147483648+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:2684354560+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:3221225472+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:3758096384+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:4294967296+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:4831838208+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:5368709120+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:5905580032+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:6442450944+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:6979321856+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:7516192768+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:8053063680+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:8589934592+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:9126805504+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:9663676416+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:10200547328+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:10737418240+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:11274289152+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:11811160064+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:12348030976+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:12884901888+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:13421772800+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:13958643712+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:14495514624+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:15032385536+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:15569256448+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:16106127360+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:16642998272+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:17179869184+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:17716740096+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:18253611008+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:18790481920+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:19327352832+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:19864223744+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:20401094656+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:20937965568+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:21474836480+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:22011707392+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:22548578304+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:23085449216+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:23622320128+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:24159191040+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:24696061952+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:25232932864+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:25769803776+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:26306674688+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:26843545600+536870912
+Feb 12, 2014 7:57:08 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap/ydata-yaltavista-webmap-v1_0_links-2.txt:27380416512+428571571
+Feb 12, 2014 7:57:08 PM edu.uci.ics.hyracks.hdfs.scheduler.Scheduler getLocationConstraints
+INFO: Data local rate: 0.746268630027771
+Feb 12, 2014 8:08:40 PM edu.uci.ics.pregelix.core.driver.Driver loadData
+INFO: data loading finished 693478ms
+Feb 12, 2014 8:22:02 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 1 finished 802003ms
+Feb 12, 2014 8:37:52 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 2 finished 950187ms
+Feb 12, 2014 8:51:48 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 3 finished 835729ms
+Feb 12, 2014 9:06:42 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 4 finished 893633ms
+Feb 12, 2014 9:12:19 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 5 finished 337173ms
+Feb 12, 2014 9:26:00 PM edu.uci.ics.pregelix.core.driver.Driver finishJobs
+INFO: result writing finished 820319ms
+Feb 12, 2014 9:26:00 PM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job finished
+Feb 12, 2014 9:26:00 PM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: performance counters
+	total vertice: 1413511390
+	total edges: 8050112169
+	num-processors: 2
+	system-load-averages: 3
+	heap-used-sizes: 1500041741
+	disk-reads: 24041922730
+	disk-writes: 32460162560
+	net-payload-bytes-read: 8159082218
+	net-payload-bytes-written: 8159082218
+
+Total Execution Time: 5357 seconds

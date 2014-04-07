@@ -1,0 +1,157 @@
+Feb 07, 2014 9:38:36 AM edu.uci.ics.pregelix.core.driver.Driver installApplication
+INFO: jar deployment finished 9083ms
+Feb 07, 2014 9:38:36 AM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job started
+Feb 07, 2014 9:38:37 AM org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+INFO: Total input paths to process : 68
+Feb 07, 2014 9:38:37 AM org.apache.hadoop.util.NativeCodeLoader <clinit>
+WARNING: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Feb 07, 2014 9:38:37 AM org.apache.hadoop.io.compress.snappy.LoadSnappy <clinit>
+WARNING: Snappy native library not loaded
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: number of splits: 68
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-0:0+526322966
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-1:0+526583460
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-10:0+526421371
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-11:0+526431874
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-12:0+526121545
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-13:0+526271950
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-14:0+526562297
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-15:0+526045679
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-16:0+526056807
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-17:0+526113736
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-18:0+527005972
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-19:0+525953871
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-2:0+526067939
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-20:0+526211705
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-21:0+525756363
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-22:0+525934481
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-23:0+526400976
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-24:0+526404400
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-25:0+526310276
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-26:0+526153548
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-27:0+526106204
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-28:0+526477476
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-29:0+525999049
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-3:0+525782198
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-30:0+526398268
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-31:0+527025992
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-32:0+526002925
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-33:0+526197049
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-34:0+525980473
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-35:0+526595953
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-36:0+525869153
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-37:0+526051783
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-38:0+525671558
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-39:0+526214096
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-4:0+526514441
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-40:0+526322542
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-41:0+526125729
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-42:0+526898689
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-43:0+526230047
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-44:0+526369177
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-45:0+526399294
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-46:0+526174079
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-47:0+526554695
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-48:0+526523005
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-49:0+526273726
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-5:0+526280555
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-50:0+526532656
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-51:0+526509024
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-52:0+526314770
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-53:0+526420571
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-54:0+526422343
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-55:0+527067341
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-56:0+526526707
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-57:0+526584341
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-58:0+526514850
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-59:0+526420503
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-6:0+526205282
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-60:0+526710646
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-61:0+526417163
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-62:0+526295389
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-63:0+526150844
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-64:0+526371805
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-65:0+526347054
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-66:0+526273751
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-67:0+526484550
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-7:0+526403424
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-8:0+526197646
+Feb 07, 2014 9:38:38 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/webmap05x/part-9:0+526077459
+Feb 07, 2014 9:38:38 AM edu.uci.ics.hyracks.hdfs.scheduler.Scheduler getLocationConstraints
+INFO: Data local rate: 0.9411764740943909
+Feb 07, 2014 9:43:34 AM edu.uci.ics.pregelix.core.driver.Driver loadData
+INFO: data loading finished 297443ms
+Feb 07, 2014 9:51:36 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 1 finished 481658ms
+Feb 07, 2014 10:00:21 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 2 finished 525115ms
+Total Execution Time: 1352 seconds

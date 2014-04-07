@@ -1,0 +1,13 @@
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "speedup.eps"
+
+#set key out vert center top
+#set title "32-Machine Cluster"
+set xlabel "Number Of Machines"
+set ylabel "Relative Avg Iteration Time"
+set xrange [8:32]
+set xtics 8,8,32
+#set yrange [0:1.0]
+
+plot "speedup.txt" u 1:2 w lp pt 1 ps 2 title "2.85GB","speedup.txt" u 1:3 w lp pt 4 ps 2 title "11.22GB","speedup.txt" u 1:4 w lp pt 8 ps 2 title "17.04GB",\
+"speedup.txt" u 1:5 w lp pt 3 ps 3 title "35.78GB","speedup.txt" u 1:6 w lp pt 6 ps 2 title "71.82GB"

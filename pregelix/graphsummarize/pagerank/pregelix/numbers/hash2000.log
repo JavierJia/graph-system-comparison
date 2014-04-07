@@ -1,0 +1,41 @@
+Jan 09, 2014 4:10:00 PM edu.uci.ics.pregelix.core.driver.Driver installApplication
+INFO: jar deployment finished 12962ms
+Jan 09, 2014 4:10:00 PM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job started
+Jan 09, 2014 4:10:01 PM org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+INFO: Total input paths to process : 2
+Jan 09, 2014 4:10:01 PM org.apache.hadoop.util.NativeCodeLoader <clinit>
+WARNING: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Jan 09, 2014 4:10:01 PM org.apache.hadoop.io.compress.snappy.LoadSnappy <clinit>
+WARNING: Snappy native library not loaded
+Jan 09, 2014 4:10:01 PM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: number of splits: 134
+Jan 09, 2014 4:10:01 PM edu.uci.ics.hyracks.hdfs.scheduler.Scheduler getLocationConstraints
+INFO: Data local rate: 0.7313432693481445
+Jan 09, 2014 4:18:28 PM edu.uci.ics.pregelix.core.driver.Driver loadData
+INFO: data loading finished 507444ms
+Jan 09, 2014 4:31:57 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 1 finished 809225ms
+Jan 09, 2014 4:46:53 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 2 finished 895735ms
+Jan 09, 2014 5:02:08 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 3 finished 914912ms
+Jan 09, 2014 5:16:38 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 4 finished 869235ms
+Jan 09, 2014 5:21:18 PM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: PageRankVertex: iteration 5 finished 280047ms
+Jan 09, 2014 5:33:20 PM edu.uci.ics.pregelix.core.driver.Driver finishJobs
+INFO: result writing finished 720914ms
+Jan 09, 2014 5:33:21 PM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job finished
+Jan 09, 2014 5:33:21 PM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: performance counters
+	num-processors: 2
+	system-load-averages: 1
+	heap-used-sizes: 1508465024
+	disk-reads: 12658935309
+	disk-writes: 16974098210
+	net-payload-bytes-read: 5050018654
+	net-payload-bytes-written: 5050018654
+
+

@@ -1,0 +1,6 @@
+#Dataset-Size Pregelix Unmerge Merge
+.044 20 24
+.176 57 93
+.266 76 133
+.560 136 426
+1.122 387 763

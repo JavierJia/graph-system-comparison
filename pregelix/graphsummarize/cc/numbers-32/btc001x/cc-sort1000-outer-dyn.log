@@ -1,0 +1,209 @@
+Mar 10, 2014 9:21:08 AM edu.uci.ics.pregelix.core.driver.Driver installApplication
+INFO: jar deployment finished 10369ms
+Mar 10, 2014 9:21:08 AM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job started
+Mar 10, 2014 9:21:10 AM org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+INFO: Total input paths to process : 62
+Mar 10, 2014 9:21:10 AM org.apache.hadoop.util.NativeCodeLoader <clinit>
+WARNING: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Mar 10, 2014 9:21:10 AM org.apache.hadoop.io.compress.snappy.LoadSnappy <clinit>
+WARNING: Snappy native library not loaded
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: number of splits: 62
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-0:0+45723279
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-1:0+45767488
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-10:0+40767675
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-11:0+40736333
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-12:0+40712189
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-13:0+40954376
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-14:0+40857013
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-15:0+40984939
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-16:0+40819820
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-17:0+40785131
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-18:0+40800590
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-19:0+40864864
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-2:0+45709638
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-20:0+40899600
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-21:0+40863914
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-22:0+40921035
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-23:0+40895430
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-24:0+40810916
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-25:0+40846936
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-26:0+40869355
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-27:0+40794097
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-28:0+45920170
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-29:0+45895060
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-3:0+45859323
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-30:0+45847856
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-31:0+45879327
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-32:0+45898253
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-33:0+45808704
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-34:0+45906466
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-35:0+45885345
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-36:0+40850150
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-37:0+40999279
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-38:0+40990586
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-39:0+40805808
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-4:0+45784992
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-40:0+40817561
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-41:0+40859492
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-42:0+40945164
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-43:0+40878098
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-44:0+40842770
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-45:0+40823335
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-46:0+40858561
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-47:0+40827922
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-48:0+40824842
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-49:0+40758496
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-5:0+40575357
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-50:0+40860702
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-51:0+40808743
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-52:0+40909957
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-53:0+40962482
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-54:0+40961537
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-55:0+40766983
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-56:0+41066903
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-57:0+40871133
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-58:0+40875276
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-59:0+45808017
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-6:0+40705947
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-60:0+46013646
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-61:0+45767699
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-7:0+40818765
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-8:0+40781618
+Mar 10, 2014 9:21:10 AM edu.uci.ics.pregelix.core.jobgen.JobGen loadHDFSData
+INFO: hdfs://sensorium-1:31888/btc001x/part-9:0+40797283
+Mar 10, 2014 9:21:10 AM edu.uci.ics.hyracks.hdfs.scheduler.Scheduler getLocationConstraints
+INFO: Data local rate: 0.9354838728904724
+Mar 10, 2014 9:21:28 AM edu.uci.ics.pregelix.core.driver.Driver loadData
+INFO: data loading finished 18796ms
+Mar 10, 2014 9:21:56 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 1 finished 27617ms
+Mar 10, 2014 9:22:24 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 2 finished 28485ms
+Mar 10, 2014 9:22:47 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 3 finished 22948ms
+Mar 10, 2014 9:23:10 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 4 finished 22970ms
+Mar 10, 2014 9:23:29 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 5 finished 19309ms
+Mar 10, 2014 9:23:46 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 6 finished 16803ms
+Mar 10, 2014 9:23:59 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 7 finished 12700ms
+Mar 10, 2014 9:24:09 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 8 finished 10134ms
+Mar 10, 2014 9:24:15 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 9 finished 5940ms
+Mar 10, 2014 9:24:20 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 10 finished 5332ms
+Mar 10, 2014 9:24:24 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 11 finished 3374ms
+Mar 10, 2014 9:24:27 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 12 finished 2896ms
+Mar 10, 2014 9:24:29 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 13 finished 2024ms
+Mar 10, 2014 9:24:31 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 14 finished 2275ms
+Mar 10, 2014 9:24:33 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 15 finished 2201ms
+Mar 10, 2014 9:24:35 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 16 finished 1969ms
+Mar 10, 2014 9:24:37 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 17 finished 2011ms
+Mar 10, 2014 9:24:39 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 18 finished 2011ms
+Mar 10, 2014 9:24:41 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 19 finished 1836ms
+Mar 10, 2014 9:24:43 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 20 finished 2017ms
+Mar 10, 2014 9:24:45 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 21 finished 1986ms
+Mar 10, 2014 9:24:47 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 22 finished 1734ms
+Mar 10, 2014 9:24:48 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 23 finished 1615ms
+Mar 10, 2014 9:24:50 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 24 finished 1515ms
+Mar 10, 2014 9:24:51 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 25 finished 1364ms
+Mar 10, 2014 9:24:53 AM edu.uci.ics.pregelix.core.driver.Driver runLoopBody
+INFO: ConnectedComponentsVertex: iteration 26 finished 1499ms
+Mar 10, 2014 9:25:00 AM edu.uci.ics.pregelix.core.driver.Driver finishJobs
+INFO: result writing finished 7587ms
+Mar 10, 2014 9:25:00 AM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: job finished
+Mar 10, 2014 9:25:00 AM edu.uci.ics.pregelix.core.driver.Driver runJobs
+INFO: performance counters
+	total vertice: 48568218
+	total edges: 215998524
+	num-processors: 2
+	system-load-averages: 0
+	heap-used-sizes: 285704631
+	disk-reads: 8192
+	disk-writes: 27983104
+	net-payload-bytes-read: 793495019
+	net-payload-bytes-written: 793496942
+
+Total Execution Time: 250 seconds

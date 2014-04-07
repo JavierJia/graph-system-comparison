@@ -1,0 +1,33 @@
+Warning: $HADOOP_HOME is deprecated.
+
+Deleted hdfs://sensorium-1:31888/tmp/ccoutput
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/06 12:42:44 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+14/03/06 12:42:44 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+14/03/06 12:42:44 INFO utils.ConfigurationUtils: Setting custom argument [giraph.useOutOfCoreGraph] to [false] in GiraphConfiguration
+14/03/06 12:42:44 INFO utils.ConfigurationUtils: Setting custom argument [giraph.useOutOfCoreMessages] to [true] in GiraphConfiguration
+14/03/06 12:42:44 INFO utils.ConfigurationUtils: Setting custom argument [giraph.partitionsDirectory] to [/scratch/yingyib/giraph] in GiraphConfiguration
+14/03/06 12:42:44 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 0, old value = 4)
+14/03/06 12:42:56 INFO job.GiraphJob: run: Tracking URL: http://sensorium-1:47040/jobdetails.jsp?jobid=job_201402140954_0163
+14/03/06 12:44:09 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer sensorium-45.ics.uci.edu:22181 --zkNode /_hadoopBsp/job_201402140954_0163/_haltComputation'
+14/03/06 12:44:09 INFO mapred.JobClient: Running job: job_201402140954_0163
+14/03/06 12:44:10 INFO mapred.JobClient:  map 18% reduce 0%
+14/03/06 12:44:12 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/06 12:44:13 INFO mapred.JobClient:  map 37% reduce 0%
+14/03/06 12:44:14 INFO mapred.JobClient:  map 81% reduce 0%
+14/03/06 12:44:15 INFO mapred.JobClient:  map 93% reduce 0%
+14/03/06 12:44:18 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/06 13:04:45 INFO mapred.JobClient:  map 93% reduce 0%
+14/03/06 13:08:40 INFO mapred.JobClient:  map 87% reduce 0%
+14/03/06 13:09:01 INFO mapred.JobClient:  map 81% reduce 0%
+14/03/06 13:15:01 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/06 13:39:00 INFO mapred.JobClient: Job complete: job_201402140954_0163
+14/03/06 13:39:00 INFO mapred.JobClient: Counters: 5
+14/03/06 13:39:00 INFO mapred.JobClient:   Job Counters 
+14/03/06 13:39:00 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=39210663
+14/03/06 13:39:00 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/06 13:39:00 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/06 13:39:00 INFO mapred.JobClient:     Launched map tasks=16
+14/03/06 13:39:00 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+Total Execution Time: 3387 seconds

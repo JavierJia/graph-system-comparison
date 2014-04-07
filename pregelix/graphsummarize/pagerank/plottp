@@ -1,0 +1,36 @@
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "tp005x.eps"
+
+#set title "32-Machine Cluster"
+set xlabel "Number of Concurrent Jobs"
+set ylabel "Jobs Per Hour (jph)"
+set xrange [1:3]
+set yrange [-1:25]
+set xtics 1,1,3
+
+plot "tp005x.txt" u 1:2 w lp pt 2 ps 2 title "Pregelix","gtp005x.txt" u 1:2 w lp pt 4 ps 2 title "Giraph"
+
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "tp01x.eps"
+
+#set title "32-Machine Cluster"
+set xlabel "Number of Concurrent Jobs"
+set ylabel "Jobs Per Hour (jph)"
+set xrange [1:3]
+set yrange [-0.2:6]
+set xtics 1,1,3
+
+plot "tp05x.txt" u 1:2 w lp pt 2 ps 2 title "Pregelix","gtp05x.txt" u 1:2 w lp pt 4 ps 2 title "Giraph"
+
+
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "tp1x.eps"
+
+#set title "32-Machine Cluster"
+set xlabel "Number of Concurrent Jobs"
+set ylabel "Jobs Per Hour (jph)"
+set xrange [1:3]
+set yrange [-0.05:3]
+set xtics 1,1,3
+
+plot "tp1x.txt" u 1:2 w lp pt 2 ps 2 title "Pregelix","gtp1x.txt" u 1:2 w lp pt 4 ps 2 title "Giraph"

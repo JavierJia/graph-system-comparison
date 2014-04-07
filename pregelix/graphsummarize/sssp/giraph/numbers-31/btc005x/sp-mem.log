@@ -1,0 +1,86 @@
+Warning: $HADOOP_HOME is deprecated.
+
+Deleted hdfs://sensorium-1:31888/tmp/spoutput
+Warning: $HADOOP_HOME is deprecated.
+
+14/02/28 17:57:55 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+14/02/28 17:57:55 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+14/02/28 17:57:55 INFO utils.ConfigurationUtils: Setting custom argument [giraph.useOutOfCoreGraph] to [false] in GiraphConfiguration
+14/02/28 17:57:55 INFO utils.ConfigurationUtils: Setting custom argument [giraph.useOutOfCoreMessages] to [false] in GiraphConfiguration
+14/02/28 17:57:55 INFO utils.ConfigurationUtils: Setting custom argument [giraph.partitionsDirectory] to [/scratch/yingyib/giraph] in GiraphConfiguration
+14/02/28 17:57:55 INFO utils.ConfigurationUtils: Setting custom argument [giraph.shortestPathsBenchmark.sourceId] to [1120] in GiraphConfiguration
+14/02/28 17:57:55 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 0, old value = 4)
+14/02/28 17:57:57 INFO job.GiraphJob: run: Tracking URL: http://sensorium-1:47040/jobdetails.jsp?jobid=job_201402140954_0086
+14/02/28 17:58:25 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer sensorium-50.ics.uci.edu:22181 --zkNode /_hadoopBsp/job_201402140954_0086/_haltComputation'
+14/02/28 17:58:25 INFO mapred.JobClient: Running job: job_201402140954_0086
+14/02/28 17:58:26 INFO mapred.JobClient:  map 65% reduce 0%
+14/02/28 17:58:28 INFO mapred.JobClient:  map 90% reduce 0%
+14/02/28 17:58:30 INFO mapred.JobClient:  map 93% reduce 0%
+14/02/28 17:58:31 INFO mapred.JobClient:  map 100% reduce 0%
+14/02/28 18:05:57 INFO mapred.JobClient: Job complete: job_201402140954_0086
+14/02/28 18:05:57 INFO mapred.JobClient: Counters: 55
+14/02/28 18:05:57 INFO mapred.JobClient:   Zookeeper halt node
+14/02/28 18:05:57 INFO mapred.JobClient:     /_hadoopBsp/job_201402140954_0086/_haltComputation=0
+14/02/28 18:05:57 INFO mapred.JobClient:   Job Counters 
+14/02/28 18:05:57 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=11928686
+14/02/28 18:05:57 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/02/28 18:05:57 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/02/28 18:05:57 INFO mapred.JobClient:     Launched map tasks=32
+14/02/28 18:05:57 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/02/28 18:05:57 INFO mapred.JobClient:   Giraph Timers
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 8 ShortestPathsVertex (ms)=13587
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 2 ShortestPathsVertex (ms)=4932
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 16 ShortestPathsVertex (ms)=3725
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 15 ShortestPathsVertex (ms)=15727
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 19 ShortestPathsVertex (ms)=3692
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 11 ShortestPathsVertex (ms)=13512
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 0 ShortestPathsVertex (ms)=22732
+14/02/28 18:05:57 INFO mapred.JobClient:     Input superstep (ms)=81232
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 7 ShortestPathsVertex (ms)=4774
+14/02/28 18:05:57 INFO mapred.JobClient:     Shutdown (ms)=147111
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 4 ShortestPathsVertex (ms)=5124
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 18 ShortestPathsVertex (ms)=9805
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 17 ShortestPathsVertex (ms)=14769
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 14 ShortestPathsVertex (ms)=4467
+14/02/28 18:05:57 INFO mapred.JobClient:     Setup (ms)=6708
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 10 ShortestPathsVertex (ms)=23406
+14/02/28 18:05:57 INFO mapred.JobClient:     Total (ms)=444357
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 5 ShortestPathsVertex (ms)=14810
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 13 ShortestPathsVertex (ms)=9188
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 12 ShortestPathsVertex (ms)=13628
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 3 ShortestPathsVertex (ms)=4457
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 1 ShortestPathsVertex (ms)=5183
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 6 ShortestPathsVertex (ms)=16960
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep 9 ShortestPathsVertex (ms)=4817
+14/02/28 18:05:57 INFO mapred.JobClient:   Zookeeper server:port
+14/02/28 18:05:57 INFO mapred.JobClient:     sensorium-50.ics.uci.edu:22181=0
+14/02/28 18:05:57 INFO mapred.JobClient:   Giraph Stats
+14/02/28 18:05:57 INFO mapred.JobClient:     Aggregate edges=607509766
+14/02/28 18:05:57 INFO mapred.JobClient:     Sent message bytes=0
+14/02/28 18:05:57 INFO mapred.JobClient:     Superstep=20
+14/02/28 18:05:57 INFO mapred.JobClient:     Last checkpointed superstep=0
+14/02/28 18:05:57 INFO mapred.JobClient:     Current workers=31
+14/02/28 18:05:57 INFO mapred.JobClient:     Aggregate sent messages=4858760
+14/02/28 18:05:57 INFO mapred.JobClient:     Current master task partition=0
+14/02/28 18:05:57 INFO mapred.JobClient:     Sent messages=0
+14/02/28 18:05:57 INFO mapred.JobClient:     Aggregate finished vertices=107706280
+14/02/28 18:05:57 INFO mapred.JobClient:     Aggregate sent message message bytes=63367703
+14/02/28 18:05:57 INFO mapred.JobClient:     Aggregate vertices=107706280
+14/02/28 18:05:57 INFO mapred.JobClient:   File Output Format Counters 
+14/02/28 18:05:57 INFO mapred.JobClient:     Bytes Written=0
+14/02/28 18:05:57 INFO mapred.JobClient:   FileSystemCounters
+14/02/28 18:05:57 INFO mapred.JobClient:     HDFS_BYTES_READ=7037018005
+14/02/28 18:05:57 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=751830
+14/02/28 18:05:57 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=3458849193
+14/02/28 18:05:57 INFO mapred.JobClient:   File Input Format Counters 
+14/02/28 18:05:57 INFO mapred.JobClient:     Bytes Read=0
+14/02/28 18:05:57 INFO mapred.JobClient:   Map-Reduce Framework
+14/02/28 18:05:57 INFO mapred.JobClient:     Map input records=32
+14/02/28 18:05:57 INFO mapred.JobClient:     Physical memory (bytes) snapshot=63472648192
+14/02/28 18:05:57 INFO mapred.JobClient:     Spilled Records=0
+14/02/28 18:05:57 INFO mapred.JobClient:     CPU time spent (ms)=7388660
+14/02/28 18:05:57 INFO mapred.JobClient:     Total committed heap usage (bytes)=60513845248
+14/02/28 18:05:57 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=157510279168
+14/02/28 18:05:57 INFO mapred.JobClient:     Map output records=0
+14/02/28 18:05:57 INFO mapred.JobClient:     SPLIT_RAW_BYTES=1408
+Total Execution Time: 499 seconds

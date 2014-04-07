@@ -1,0 +1,6 @@
+#Dataset-Size Pregelix Giraph-mem Giraph-ooc
+.080 199  
+.220 553  
+.284 720  
+.420 1276  
+.520 1642  

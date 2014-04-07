@@ -1,0 +1,5 @@
+14/04/03 10:44:33 INFO mapred.JobClient:     Superstep 1 PageRankVertex (ms)=214164
+14/04/03 10:44:33 INFO mapred.JobClient:     Superstep 4 PageRankVertex (ms)=121420
+14/04/03 10:44:33 INFO mapred.JobClient:     Superstep 2 PageRankVertex (ms)=182360
+14/04/03 10:44:33 INFO mapred.JobClient:     Superstep 3 PageRankVertex (ms)=180026
+14/04/03 10:44:33 INFO mapred.JobClient:     Superstep 0 PageRankVertex (ms)=86375

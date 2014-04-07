@@ -1,0 +1,12 @@
+set terminal postscript eps size 4.5,3.0  font 'Helvetica,30' linewidth 2
+set output "scaleup.eps"
+
+#set title "32-Machine Cluster"
+set xlabel "Scale"
+set ylabel "Relative Avg Iteration Time"
+set xrange [0:1]
+set yrange [0:4]
+set xtics 0,0.2,1
+set ytics 0,1,4
+
+plot "pagerank/scaleup.txt" u 1:2 w lp pt 1 ps 2 title "PageRank","sssp/scaleup.txt" u 1:2 w lp pt 4 ps 2 title "SSSP","cc/scaleup.txt" u 1:2 w lp pt 8 ps 2 title "CC","idealscale" u 1:2 w lp pt 7 ps 2 title "Ideal"
