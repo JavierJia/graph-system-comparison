@@ -77,14 +77,6 @@ public class SSSP {
 			extends
 			VertexInputReader<LongWritable, Text, VLongWritable, IntWritable, IntWritable> {
 
-		/**
-		 * The text file essentially should look like: <br/>
-		 * VERTEX_ID\t(n-tab separated VERTEX_ID:VERTEX_VALUE pairs)<br/>
-		 * E.G:<br/>
-		 * 1\t2:25\t3:32\t4:21<br/>
-		 * 2\t3:222\t1:922<br/>
-		 * etc.
-		 */
 		@Override
 		public boolean parseVertex(LongWritable key, Text value,
 				Vertex<VLongWritable, IntWritable, IntWritable> vertex)
