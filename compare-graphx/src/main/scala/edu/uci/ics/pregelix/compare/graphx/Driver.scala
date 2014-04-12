@@ -43,21 +43,56 @@ object Driver {
     sssp
   }
 
-  def main(args: Array[String]) {
-    if (args.length < 4) {
-      System.err.println("Usage: Driver <master> <cmd> <inputPath> <outputPath> [cmd-specific-args]")
-      System.err.println("\tcmd: [PageRank|CC|SSSP|TC]")
-      System.err.println("\tcmd-specific-args: ")
-      System.err.println("\t\tPageRank: [maxIterations] default=10")
-      System.err.println("\t\tCC: None")
-      System.err.println("\t\tTC: None")
-      System.err.println("\t\tSSSP: [sourcId] default=first vertex id in the given file")
-      System.exit(1)
-    }
-    var conf = new SparkConf().setMaster(args(0)).setAppName("GraphComparison").set("spark.executor.memory", "8g");
+  var master: String = ""
+  var memory: String = "1g"
+  var cores: Int = 8
+  var cmd: String = ""
+  var inputPath: String = ""
+  var outputPath: String = ""
 
-    val sc = new SparkContext(args(0), "GraphXTest",
-      System.getenv("SPARK_HOME"), SparkContext.jarOfClass(this.getClass))
+  def parse(args: List[String]): Option[String] = args match {
+    case ("--cores" | "-c") :: value :: tail =>
+      cores = value.toInt
+      parse(tail)
+
+    case ("--memory" | "-m") :: value :: tail =>
+      memory = value
+      parse(tail)
+
+    case ("--help" | "-h") :: tail =>
+      usage
+      None
+
+    case "cmd" :: _cmd :: _inputPath :: _outputPath :: tail =>
+      var (cmd, inputPath, outputPath) = (_cmd, _inputPath, _outputPath)
+      Some(tail.toString)
+
+    case _ =>
+      usage
+      None
+  }
+
+  def usage(): Unit = {
+    System.err.println("Usage: Driver master <masterUrl> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
+    System.err.println("  --memory <count> (amount of memory, in MB, allocated for your driver program)")
+    System.err.println("  --cores <count> (number of cores allocated for your driver program)")
+    System.err.println("  cmd: [PageRank|CC|SSSP|TC]")
+    System.err.println("  cmd-specific-args: ")
+    System.err.println("    PageRank: [maxIterations] default=10")
+    System.err.println("    CC: None")
+    System.err.println("    TC: None")
+    System.err.println("    SSSP: [sourcId] default=first vertex id in the given file")
+    System.exit(1)
+  }
+
+  def main(args: Array[String]) {
+
+    var conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
+    var extraArgs = parse(args.slice(1, args.length).toList).getOrElse("")
+    conf.set("spark.executor.memory", memory)
+    conf.set("spark.cores.max", cores.toString)
+
+    val sc = new SparkContext(conf)
 
     var (cmd, inputPath, outputPath) = (args(1), args(2), args(3))
 
@@ -72,7 +107,11 @@ object Driver {
         triagleCounting(sc, inputPath).vertices.saveAsTextFile(outputPath)
       }
       case "sssp" => {
-        sssp(sc, inputPath, if (args.length > 4) Some(args(4).toLong) else None)
+        sssp(sc, inputPath, if (extraArgs.length > 0) Some(extraArgs.trim().toLong) else None)
+      }
+      case _ => {
+        System.err.println("cmd is missing")
+        usage
       }
     }
 
