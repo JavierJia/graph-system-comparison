@@ -60,7 +60,7 @@ object Driver {
       parse(tail)
 
     case ("--help" | "-h") :: tail =>
-      usage
+      usage()
       None
 
     case "cmd" :: _cmd :: _inputPath :: _outputPath :: tail =>
@@ -68,11 +68,11 @@ object Driver {
       Some(tail.toString)
 
     case _ =>
-      usage
+      usage()
       None
   }
 
-  def usage(): Unit = {
+  def usage(ret: Int = 1) {
     System.err.println("Usage: Driver <masterUrl> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
     System.err.println("  --memory <count> (amount of memory, default 1g, allocated for your driver program)")
     System.err.println("  --cores <count> (number of cores allocated for your driver program on cluster Not per machine, default 8 )")
@@ -82,12 +82,12 @@ object Driver {
     System.err.println("    CC: None")
     System.err.println("    TC: None")
     System.err.println("    SSSP: [sourcId] default=first vertex id in the given file")
-    System.exit(1)
+    System.exit(ret)
   }
 
   def main(args: Array[String]) {
 
-    if (args.length < 1) usage
+    if (args.length < 1) usage(0)
     var conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
     var extraArgs = parse(args.slice(1, args.length).toList).getOrElse("")
     conf.set("spark.executor.memory", memory)
@@ -112,7 +112,7 @@ object Driver {
       }
       case _ => {
         System.err.println("cmd is missing")
-        usage
+        usage(1)
       }
     }
 
