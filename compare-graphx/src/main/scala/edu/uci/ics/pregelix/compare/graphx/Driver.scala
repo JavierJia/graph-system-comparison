@@ -73,9 +73,9 @@ object Driver {
   }
 
   def usage(): Unit = {
-    System.err.println("Usage: Driver master <masterUrl> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
-    System.err.println("  --memory <count> (amount of memory, in MB, allocated for your driver program)")
-    System.err.println("  --cores <count> (number of cores allocated for your driver program)")
+    System.err.println("Usage: Driver <masterUrl> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
+    System.err.println("  --memory <count> (amount of memory, default 1g, allocated for your driver program)")
+    System.err.println("  --cores <count> (number of cores allocated for your driver program on cluster Not per machine, default 8 )")
     System.err.println("  cmd: [PageRank|CC|SSSP|TC]")
     System.err.println("  cmd-specific-args: ")
     System.err.println("    PageRank: [maxIterations] default=10")
