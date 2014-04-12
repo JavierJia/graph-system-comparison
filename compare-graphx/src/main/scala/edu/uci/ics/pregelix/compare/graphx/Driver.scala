@@ -87,6 +87,7 @@ object Driver {
 
   def main(args: Array[String]) {
 
+    if (args.length < 1) usage
     var conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
     var extraArgs = parse(args.slice(1, args.length).toList).getOrElse("")
     conf.set("spark.executor.memory", memory)
