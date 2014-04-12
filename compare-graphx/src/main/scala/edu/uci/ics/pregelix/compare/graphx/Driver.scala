@@ -9,25 +9,38 @@ import org.apache.spark.graphx.EdgeTriplet
 
 object Driver {
 
+  def loadWebmap[VD: ClassTag, ED: ClassTag](sc: SparkContext, path: String, defaultEdgeAttr: ED, defaultVetexAttr: VD): Graph[VD, ED] =
+    {
+      val startTime = System.currentTimeMillis
+      var textRDD = sc.textFile(path);
+      var edge = textRDD.flatMap(
+        line => {
+          var numbers = line.split(" ");
+          var srcId: VertexId = numbers(0).trim.toLong;
+          numbers.slice(2, numbers.size).map(num => Edge(srcId, num.trim.toLong, defaultEdgeAttr))
+        })
+      Graph.fromEdges[VD, ED](edge, defaultVetexAttr);
+    }
+
   def pageRank(sc: SparkContext, inputPath: String, maxIterations: Int): Graph[Double, Double] = {
-    var graph = GraphLoader.loadWebmap(sc, inputPath, 1.0, 1.0)
+    var graph = loadWebmap(sc, inputPath, 1.0, 1.0)
     graph.staticPageRank(maxIterations)
   }
 
   def connectedComponent(sc: SparkContext, inputPath: String): Graph[VertexId, Int] = {
-    var graph = GraphLoader.loadWebmap(sc, inputPath, 1, 1)
+    var graph = loadWebmap(sc, inputPath, 1, 1)
     graph.connectedComponents
   }
 
   def triagleCounting(sc: SparkContext, inputPath: String): Graph[Int, Int] = {
-    var graph = GraphLoader.loadWebmap(sc, inputPath, 1, 1).partitionBy(PartitionStrategy.RandomVertexCut)
+    var graph = loadWebmap(sc, inputPath, 1, 1).partitionBy(PartitionStrategy.RandomVertexCut)
     graph.triangleCount
   }
 
   def sssp(sc: SparkContext, inputPath: String, givenSource: Option[Long] = None): Graph[Double, Double] = {
     // Initialize the graph such that all vertices except the root have distance infinity.
     var sourceId = givenSource.getOrElse(sc.textFile(inputPath).first.split("\\W+")(0).toLong)
-    var graph = GraphLoader.loadWebmap(sc, inputPath, 1.0, Double.PositiveInfinity);
+    var graph = loadWebmap(sc, inputPath, 1.0, Double.PositiveInfinity);
     val initialGraph = graph.mapVertices((id, _) => if (id == sourceId) 0.0 else Double.PositiveInfinity)
     val sssp = initialGraph.pregel(Double.PositiveInfinity)(
       (id, dist, newDist) => math.min(dist, newDist), // Vertex Program
