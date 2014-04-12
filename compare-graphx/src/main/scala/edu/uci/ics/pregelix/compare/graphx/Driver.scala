@@ -103,8 +103,8 @@ object Driver {
   def main(args: Array[String]) {
 
     if (args.length < 1) usage(0)
-    var conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
-    var extraArgs = parse(args.slice(1, args.length).toList).getOrElse(List.empty)
+    val conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
+    val extraArgs = parse(args.slice(1, args.length).toList).getOrElse(List.empty)
     System.out.println("extraArgs:" + extraArgs);
 
     conf.set("spark.executor.memory", memory)
