@@ -45,12 +45,12 @@ object Driver {
 
   var master: String = ""
   var memory: String = "1g"
-  var cores: Int = 8
+  var cores: Int = Int.MaxValue
   var cmd: String = ""
   var inputPath: String = ""
   var outputPath: String = ""
 
-  def parse(args: List[String]): Option[String] = args match {
+  def parse(args: List[String]): Option[List[String]] = args match {
     case ("--cores" | "-c") :: value :: tail =>
       cores = value.toInt
       parse(tail)
@@ -64,8 +64,10 @@ object Driver {
       None
 
     case "cmd" :: _cmd :: _inputPath :: _outputPath :: tail =>
-      var (cmd, inputPath, outputPath) = (_cmd, _inputPath, _outputPath)
-      Some(tail.toString)
+      cmd = _cmd
+      inputPath = _inputPath
+      outputPath = _outputPath
+      Some(tail)
 
     case _ =>
       usage()
@@ -75,7 +77,7 @@ object Driver {
   def usage(ret: Int = 1) {
     System.err.println("Usage: Driver <masterUrl> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
     System.err.println("  --memory <count> (amount of memory, default 1g, allocated for your driver program)")
-    System.err.println("  --cores <count> (number of cores allocated for your driver program on cluster Not per machine, default 8 )")
+    System.err.println("  --cores <count> (number of cores allocated for your driver program on cluster Not per machine, default all )")
     System.err.println("  cmd: [PageRank|CC|SSSP|TC]")
     System.err.println("  cmd-specific-args: ")
     System.err.println("    PageRank: [maxIterations] default=10")
@@ -89,17 +91,17 @@ object Driver {
 
     if (args.length < 1) usage(0)
     var conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
-    var extraArgs = parse(args.slice(1, args.length).toList).getOrElse("")
+    var extraArgs = parse(args.slice(1, args.length).toList).getOrElse(List.empty)
+    System.out.println("extraArgs:" + extraArgs);
+
     conf.set("spark.executor.memory", memory)
     conf.set("spark.cores.max", cores.toString)
 
     val sc = new SparkContext(conf)
 
-    var (cmd, inputPath, outputPath) = (args(1), args(2), args(3))
-
     cmd.toLowerCase() match {
       case "pagerank" => {
-        pageRank(sc, inputPath, if (args.length > 4) args(4).toInt else 10).vertices.saveAsTextFile(outputPath)
+        pageRank(sc, inputPath, if (extraArgs.length > 0) extraArgs(0).trim().toInt else 10).vertices.saveAsTextFile(outputPath)
       }
       case "cc" => {
         connectedComponent(sc, inputPath).vertices.saveAsTextFile(outputPath)
@@ -108,7 +110,7 @@ object Driver {
         triagleCounting(sc, inputPath).vertices.saveAsTextFile(outputPath)
       }
       case "sssp" => {
-        sssp(sc, inputPath, if (extraArgs.length > 0) Some(extraArgs.trim().toLong) else None)
+        sssp(sc, inputPath, if (extraArgs.length > 0) Some(extraArgs(0).trim().toLong) else None)
       }
       case _ => {
         System.err.println("cmd is missing")
