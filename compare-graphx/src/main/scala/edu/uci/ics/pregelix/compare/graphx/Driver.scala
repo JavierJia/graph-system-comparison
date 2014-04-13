@@ -62,8 +62,14 @@ object Driver {
   var cmd: String = ""
   var inputPath: String = ""
   var outputPath: String = ""
+  var jars : Array[String] = Array()
 
   def parse(args: List[String]): Option[List[String]] = args match {
+
+    case "jar" :: _jars :: tail => 
+      jars = _jars.split(",")
+      parse(tail)
+
     case ("--cores" | "-c") :: value :: tail =>
       cores = value.toInt
       parse(tail)
@@ -88,7 +94,8 @@ object Driver {
   }
 
   def usage(ret: Int = 1) {
-    System.err.println("Usage: Driver <masterUrl> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
+    System.err.println("Usage: Driver <masterUrl> jar <jars> -c <cores> -m <mems> cmd <cmd> <inputPath> <outputPath> [cmd-specific-args]")
+    System.err.println("  jar <run-jars> split by , " )
     System.err.println("  --memory <count> (amount of memory, default 1g, allocated for your driver program)")
     System.err.println("  --cores <count> (number of cores allocated for your driver program on cluster Not per machine, default all )")
     System.err.println("  cmd: [PageRank|CC|SSSP|TC]")
@@ -105,8 +112,13 @@ object Driver {
     if (args.length < 1) usage(0)
     val conf = new SparkConf().setMaster(args(0)).setAppName("GraphXComparison")
     val extraArgs = parse(args.slice(1, args.length).toList).getOrElse(List.empty)
-    System.out.println("extraArgs:" + extraArgs);
 
+    if (jars.length < 1) {
+        System.err.println("Should have at lease one dependency jar to run on the distribute cluster!")
+        usage()
+    }
+
+    conf.setJars(jars)
     conf.set("spark.executor.memory", memory)
     conf.set("spark.cores.max", cores.toString)
 
