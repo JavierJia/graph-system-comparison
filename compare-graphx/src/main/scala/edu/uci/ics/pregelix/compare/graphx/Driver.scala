@@ -135,7 +135,7 @@ object Driver {
         triagleCounting(sc, inputPath).vertices.saveAsTextFile(outputPath)
       }
       case "sssp" => {
-        sssp(sc, inputPath, if (extraArgs.length > 0) Some(extraArgs(0).trim().toLong) else None)
+        sssp(sc, inputPath, if (extraArgs.length > 0) Some(extraArgs(0).trim().toLong) else None).vertices.saveAsTextFile(outputPath)
       }
       case _ => {
         System.err.println("cmd is missing")
