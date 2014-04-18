@@ -19,7 +19,7 @@ import org.apache.hama.graph.Vertex;
 import org.apache.hama.graph.VertexInputReader;
 import org.apache.hama.graph.VerticesInfo;
 
-public class ConectedComponent {
+public class ConnectedComponent {
 
 	public static class CCVertex extends
 			Vertex<VLongWritable, NullWritable, VLongWritable> {
@@ -77,7 +77,7 @@ public class ConectedComponent {
 
 	public static GraphJob createJob(String[] args, HamaConfiguration conf)
 			throws IOException {
-		GraphJob ccJob = new GraphJob(conf, ConectedComponent.class);
+		GraphJob ccJob = new GraphJob(conf, ConnectedComponent.class);
 		ccJob.setJobName("ConnectedComponent");
 
 		ccJob.setVertexClass(CCVertex.class);
