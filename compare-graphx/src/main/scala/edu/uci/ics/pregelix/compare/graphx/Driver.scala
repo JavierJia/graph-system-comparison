@@ -27,7 +27,7 @@ object Driver {
     graph.staticPageRank(maxIterations)
   }
 
-  def connectedComponent(sc: SparkContext, inputPath: String): Graph[VertexId, Int] = {
+  def connectedComponent(sc: SparkContext, inputPath:                                                                                                                                                                                                                                                                                                                                                             String): Graph[VertexId, Int] = {
     var graph = loadWebmap(sc, inputPath, 1, 1)
     graph.connectedComponents
   }

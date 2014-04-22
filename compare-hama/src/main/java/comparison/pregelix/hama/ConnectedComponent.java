@@ -36,8 +36,8 @@ public class ConnectedComponent {
 				}
 				setValue(new VLongWritable(min));
 				sendMessageToNeighbors(new VLongWritable(min));
-			} else if (this.getSuperstepCount() >= 1) {
-				long min = this.getVertexID().get();
+			} else {
+				long min = this.getValue().get();
 				boolean changed = false;
 				for (VLongWritable msg : messages) {
 					if (msg.get() < min) {
@@ -85,7 +85,7 @@ public class ConnectedComponent {
 		ccJob.setOutputPath(new Path(args[1]));
 
 		// set the defaults
-		ccJob.setMaxIteration(Integer.MAX_VALUE);
+		 ccJob.setMaxIteration(Integer.MAX_VALUE);
 
 		if (args.length > 2) {
 			ccJob.setNumBspTask(Integer.parseInt(args[2]));
