@@ -11,7 +11,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.junit.Test;
 
-public class AllInOne {
+public class AllInOneTest {
 
 	final String DIRECTED_ADJLIST_PATH = "src/test/resource/test10.directed.txt";
 	final String UNDIRECTED_ADJLIST_PATH = "src/test/resource/test10.undirected.txt";
