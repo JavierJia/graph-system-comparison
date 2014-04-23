@@ -19,24 +19,47 @@
 
 set -o nounset
 
-input="hdfs://ipubmed2.ics.uci.edu:9000/user/jianfeng/data/sample"
-output_folder="hdfs://ipubmed2.ics.uci.edu:9000/user/jianfeng/result/graph_lab"
-ncores=8
+fmachines="./machinefile"
+nmachines=`wc -l $fmachines | cut -d " " -f1`
+mpdboot -n $nmachines -f $fmachines 
+
+hadoop_home="/home/jianfenj/software/hadoop"
+toolkit_path="release/toolkits/graph_analytics"
+test_alg=${1:-"all"}
+input=${2:-"hdfs://ipubmed2.ics.uci.edu:9000/user/jianfeng/data/sample"}
+#input="hdfs://ipubmed2.ics.uci.edu:9000/user/jianfeng/data/yingyi_webmap001x"
+output_folder=${3:-"hdfs://ipubmed2.ics.uci.edu:9000/user/jianfeng/result/graph_lab/`basename $input`"}
+ncores=$(($nmachines * 4))
 
 declare -A extra=(\
-    ["pagerank"]="--iteration 4 --saveprefix ${output_folder}_pagerank"\
-    ["sssp"]="--source 1000 --saveprefix ${output_folder}_sssp"\
+    ["pagerank"]="--iteration 5 --saveprefix ${output_folder}_pagerank"\
+    ["sssp"]="--source 1824 --saveprefix ${output_folder}_sssp"\
     ["connected_component"]="--saveprefix ${output_folder}_cc"\
     ["simple_undirected_triangle_count"]="--per_vertex ${output_folder}_tc"\
 )
 
-for alg in "pagerank" "sssp" "connected_component" "simple_undirected_triangle_count";
-do
-    cmd="./$alg --graph $input --format adj ${extra[$alg]} --ncpus $ncores 2>&1 | tee ${alg}.log"
+function run_cmd {
+    alg=$1
+    filetag=`basename $input`
+    logfile="graphlab.${filetag}.${alg}.node${nmachines}.log"
+    cmd="$toolkit_path/$alg --graph $input --format adj ${extra[$alg]} --ncpus $ncores 2>&1 | tee $logfile"
     echo $cmd
+    success=true
     stt=$(date +"%s")
-    eval "time mpiexec -n 1 env CLASSPATH=`hadoop classpath` $cmd"
+    eval "time mpiexec -machinefile $fmachines -n $nmachines env CLASSPATH=`$hadoop_home/bin/hadoop classpath` env HADOOP_USER_NAME=jianfeng $cmd"
+    [ $? == 0 ] || { success=false; }
     end=$(date +"%s")
     diff=$(($end-$stt))
-    echo "$cmd:$diff secs" >> ${alg}.log
-done
+    echo "$cmd:$diff secs" >> $logfile
+    [ $success = true ] || { echo "EXIT WITH ERROR!" >> $logfile; exit -1; }
+}
+
+if [ $test_alg == "all" ]; then 
+    for alg in "pagerank" "sssp" "connected_component" "simple_undirected_triangle_count";
+    do
+        run_cmd $alg   
+    done
+else
+    run_cmd $test_alg
+fi
+
