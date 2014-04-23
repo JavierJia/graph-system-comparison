@@ -98,7 +98,7 @@ public class SSSP {
 	}
 
 	private static void printUsage() {
-		System.out.println("Usage: <input> <output> [tasks] [startnode] ");
+		System.out.println("Usage: <input> <output> [tasks] [startnode]  [max-iterations]");
 		System.exit(-1);
 	}
 
@@ -113,18 +113,24 @@ public class SSSP {
 		// Set the job name
 		ssspJob.setJobName("Single Source Shortest Path");
 
-		
 		ssspJob.setInputPath(new Path(args[0]));
 		ssspJob.setOutputPath(new Path(args[1]));
-		
+
 		if (args.length > 2) {
 			ssspJob.setNumBspTask(Integer.parseInt(args[2]));
 		}
-		
-		if (args.length > 3){
+
+		if (args.length > 3) {
 			conf.set(START_VERTEX, args[3]);
-		}else{
+		} else {
 			conf.set(START_VERTEX, "0");
+		}
+
+		if (args.length > 4) {
+			ssspJob.setMaxIteration(Integer.parseInt(args[4]));
+		} else {
+			// Iterate until all the nodes have been reached.
+			ssspJob.setMaxIteration(Integer.MAX_VALUE);
 		}
 
 		ssspJob.setVertexClass(ShortestPathVertex.class);
@@ -138,8 +144,6 @@ public class SSSP {
 		ssspJob.setVertexInputReaderClass(SSSPTextReader.class);
 		ssspJob.setOutputKeyClass(VLongWritable.class);
 		ssspJob.setOutputValueClass(IntWritable.class);
-		// Iterate until all the nodes have been reached.
-		ssspJob.setMaxIteration(Integer.MAX_VALUE);
 
 		ssspJob.setVertexIDClass(VLongWritable.class);
 		ssspJob.setVertexValueClass(IntWritable.class);

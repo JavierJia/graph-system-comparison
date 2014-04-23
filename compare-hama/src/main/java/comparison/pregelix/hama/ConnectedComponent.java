@@ -84,11 +84,15 @@ public class ConnectedComponent {
 		ccJob.setInputPath(new Path(args[0]));
 		ccJob.setOutputPath(new Path(args[1]));
 
-		// set the defaults
-		 ccJob.setMaxIteration(Integer.MAX_VALUE);
-
 		if (args.length > 2) {
 			ccJob.setNumBspTask(Integer.parseInt(args[2]));
+		}
+
+		if (args.length > 3) {
+			ccJob.setMaxIteration(Integer.parseInt(args[3]));
+		} else {
+			// set the defaults
+			ccJob.setMaxIteration(Integer.MAX_VALUE);
 		}
 
 		// Vertex reader
