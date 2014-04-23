@@ -46,7 +46,7 @@ public class AllInOneTest {
 		String inputPath = UNDIRECTED_ADJLIST_PATH;
 		String outputFolder = getOutput(inputPath, ".sssp");
 		String taskNum = "4";
-		SSSP.main(new String[] { startnode, inputPath, outputFolder, taskNum });
+		SSSP.main(new String[] { inputPath, outputFolder, taskNum, startnode });
 
 		verifyResult(outputFolder);
 	}

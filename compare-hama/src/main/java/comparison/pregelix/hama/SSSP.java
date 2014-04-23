@@ -98,7 +98,7 @@ public class SSSP {
 	}
 
 	private static void printUsage() {
-		System.out.println("Usage: <startnode> <input> <output> [tasks]");
+		System.out.println("Usage: <input> <output> [tasks] [startnode] ");
 		System.exit(-1);
 	}
 
@@ -113,12 +113,18 @@ public class SSSP {
 		// Set the job name
 		ssspJob.setJobName("Single Source Shortest Path");
 
-		conf.set(START_VERTEX, args[0]);
-		ssspJob.setInputPath(new Path(args[1]));
-		ssspJob.setOutputPath(new Path(args[2]));
-
-		if (args.length > 3) {
-			ssspJob.setNumBspTask(Integer.parseInt(args[3]));
+		
+		ssspJob.setInputPath(new Path(args[0]));
+		ssspJob.setOutputPath(new Path(args[1]));
+		
+		if (args.length > 2) {
+			ssspJob.setNumBspTask(Integer.parseInt(args[2]));
+		}
+		
+		if (args.length > 3){
+			conf.set(START_VERTEX, args[3]);
+		}else{
+			conf.set(START_VERTEX, "0");
 		}
 
 		ssspJob.setVertexClass(ShortestPathVertex.class);
