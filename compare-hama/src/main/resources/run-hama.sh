@@ -20,15 +20,21 @@
 set -o nounset                              # Treat unset variables as an error
 
 jar=compare-hama-0.0.1-SNAPSHOT.jar
-input=/user/hadoop/data/webmap001x/part-all
-output=hama/webmap001x
+#input=/user/hadoop/data/webmap001x/part-all
+input=/user/jianfeng/data/sample/sample.400k.20.txt
+output_folder=hama
 parallel=8
 
-extra="4"       # for pagerank notify how many iterations
-#extra="1000"    # for SSSP notify the source point
+declare -A extra
+extra["PageRank"]="4"   # for pagerank iterations
+extra["SSSP"]="33"      # for SSSP start node
+extra["TriagleCounting"]=""
+extra["ConectedComponent"]=""
 
 for cmd in "PageRank" "SSSP" "TriagleCounting" "ConectedComponent"; do
-    exe="bin/hama jar comparison.pregelix.hama.$cmd $input $output $parallel $extra"
+    output="${output_folder}_${cmd}"
+    exe="bin/hama jar $jar comparison.pregelix.hama.$cmd $input $output $parallel ${extra[$cmd]}"
     echo $exe
     eval "$exe"
 done
+
