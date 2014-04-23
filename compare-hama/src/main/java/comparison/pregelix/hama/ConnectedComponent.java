@@ -112,7 +112,7 @@ public class ConnectedComponent {
 	}
 
 	private static void printUsage() {
-		System.out.println("Usage: <input> <output> [tasks]");
+		System.out.println("Usage: <input> <output> [tasks] [max-iterations]");
 		System.exit(-1);
 	}
 
