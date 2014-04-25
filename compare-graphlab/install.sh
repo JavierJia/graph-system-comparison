@@ -22,8 +22,8 @@ set -o nounset                              # Treat unset variables as an error
 tar xvf ./graphlab-2.2.tar.gz
 cd graphlab*
 
-apt-get install mpich2 cmake zlib1g-dev
+#apt-get install mpich2 cmake zlib1g-dev
 ./configure
 cd release/toolkits/graph_analytics
-make -j8
+make -j4
 

@@ -19,6 +19,8 @@
 
 set -o nounset
 
+source $HOME/common.sh
+
 fmachines="./machinefile"
 nmachines=`wc -l $fmachines | cut -d " " -f1`
 mpdboot -n $nmachines -f $fmachines 
@@ -50,8 +52,13 @@ function run_cmd {
     [ $? == 0 ] || { success=false; }
     end=$(date +"%s")
     diff=$(($end-$stt))
-    echo "$cmd:$diff secs" >> $logfile
-    [ $success = true ] || { echo "EXIT WITH ERROR!" >> $logfile; exit -1; }
+    echo $'\n'"$cmd:$diff secs" >> $logfile
+    if [ $success = true ];then
+        exit_and_email_message 0 "GraphLab success" "$cmd" "time: $diff secs"
+    else
+        echo "EXIT WITH ERROR!" >> $logfile; 
+        exit_and_email_message -1 "GraphLab failed" "$cmd"
+    fi
 }
 
 if [ $test_alg == "all" ]; then 
