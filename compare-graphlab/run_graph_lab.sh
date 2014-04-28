@@ -23,7 +23,7 @@ source $HOME/common.sh
 
 fmachines="./machinefile"
 nmachines=`wc -l $fmachines | cut -d " " -f1`
-mpdboot -n $nmachines -f $fmachines 
+#mpdboot -n $nmachines -f $fmachines 
 
 hadoop_home="/home/jianfenj/software/hadoop"
 toolkit_path="release/toolkits/graph_analytics"
@@ -48,7 +48,7 @@ function run_cmd {
     echo $cmd
     success=true
     stt=$(date +"%s")
-    eval "time mpiexec -machinefile $fmachines -n $nmachines env CLASSPATH=`$hadoop_home/bin/hadoop classpath` env HADOOP_USER_NAME=jianfeng $cmd"
+    eval "time mpiexec -machinefile $fmachines -n $nmachines env CLASSPATH=`$hadoop_home/bin/hadoop classpath` $cmd"
     [ $? == 0 ] || { success=false; }
     end=$(date +"%s")
     diff=$(($end-$stt))

@@ -24,7 +24,7 @@
 <configuration>
 <property>
       <name>bsp.master.address</name>
-      <value>sensorium-7:4000</value>
+      <value>sensorium-21:4000</value>
       <!--value>ipubmed2:4000</value-->
       <!--value>local</value-->
       <description>The address of the bsp master server. Either the
@@ -34,7 +34,7 @@
 
     <property>
       <name>fs.default.name</name>
-      <value>hdfs://ipubmed2.ics.uci.edu:9000</value>
+      <value>hdfs://sensorium-21.ics.uci.edu:9000</value>
       <!--value>hdfs://ipubmed2.ics.uci.edu:9000</value-->
       <!--value>file:///tmp/</value-->
       <description>
@@ -58,7 +58,7 @@
 
   <property>
     <name>bsp.max.tasks.per.job</name>
-    <value>20000000</value>
+    <value>200000000</value>
     <description>The maximum number of BSP tasks per job. 
     By default, This limit is switched off.
     </description>
@@ -66,30 +66,17 @@
 
   <property>
     <name>bsp.min.split.size</name>
-    <value>897803329</value>
+    <value>8978033269</value>
     <!--value>8978033269</value-->
   </property>
 
 
   <property>
     <name>hama.tmp.dir</name>
-    <value>/scratch/jianfenj/tmp/hama-${user.name}</value>
+    <value>/scratch/jianfenj/tmp/hama</value>
     <description>Temporary directory on the local filesystem.</description>
   </property>
 
-  <property>
-    <name>bsp.system.dir</name>
-    <value>${hama.tmp.dir}/bsp/system</value>
-    <description>The shared directory where BSP stores control files.
-    </description>
-  </property>
-  <property>
-    <name>bsp.local.dir</name>
-    <value>${hama.tmp.dir}/bsp/local</value>
-    <description>local directory for temporal store.</description> 
-  </property>
- 
- 
   <property>
     <name>bsp.child.java.opts</name>
     <value>-Xmx2g</value>
@@ -106,7 +93,7 @@
 
    <property>
     <name>hama.zookeeper.quorum</name>
-    <value>sensorium-7,sensorium-8,sensorium-9</value>
+    <value>sensorium-22,sensorium-23,sensorium-24,sensorium-25,sensorium-26,sensorium-27,sensorium-28,sensorium-29,sensorium-30,sensorium-31,sensorium-32,sensorium-33,sensorium-34,sensorium-35,sensorium-36,sensorium-37</value>
     <description>Comma separated list of servers in the ZooKeeper quorum.
     For example, "host1.mydomain.com,host2.mydomain.com,host3.mydomain.com".
     By default this is set to localhost for local and pseudo-distributed modes

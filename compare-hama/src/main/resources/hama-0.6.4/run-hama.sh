@@ -18,24 +18,43 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
+source $HOME/common.sh
 
 export HAMA_HOME=$PWD
 jar=../../../../target/compare-hama-0.0.1-SNAPSHOT.jar
 #input=/user/hadoop/data/webmap001x/part-all
-input=/user/jianfeng/data/sample/sample.400k.20.txt
-output_folder=/tmp/hama-result
-parallel=8
+test_alg=${1:-"all"}
+input=${2:-"/user/jianfeng/data/sample/sample.400k.20.txt"}
+output_folder=${3:-"/tmp/hama-result"}
+parallel=64
 
 declare -A extra
-extra["PageRank"]="4"   # for pagerank iterations
-extra["SSSP"]="33"      # for SSSP start node
+extra["PageRank"]="5"   # for pagerank iterations
+extra["SSSP"]="1824"      # for SSSP start node
 extra["TriagleCounting"]=""
 extra["ConnectedComponent"]=""
 
-for cmd in "PageRank" "SSSP" "TriagleCounting" "ConnectedComponent"; do
+if [ $test_alg == "all" ]; then
+    for cmd in "PageRank" "SSSP" "TriagleCounting" "ConnectedComponent"; do
+        output="${output_folder}_${cmd}"
+        exe="bin/hama jar $jar comparison.pregelix.hama.$cmd $input $output $parallel ${extra[$cmd]}"
+        echo $exe
+        eval "$exe"
+    done
+else
+    cmd=$test_alg
     output="${output_folder}_${cmd}"
-    exe="HADOOP_USER_NAME=hadoop bin/hama jar $jar comparison.pregelix.hama.$cmd $input $output $parallel ${extra[$cmd]}"
+    filetag=`basename $input`
+    nnode=$(($parallel / 4))
+    logfile="hama.${filetag}.${cmd}.node${nnode}.log"
+ 
+    stt=$(date +"%s")
+    exe="bin/hama jar $jar comparison.pregelix.hama.$cmd $input $output $parallel ${extra[$cmd]} 2>&1 | tee $logfile"
     echo $exe
     eval "$exe"
-done
+    exitno=$?
+    end=$(date +"%s")
+    diff=$(($end-$stt))
+    exit_and_email_message $exitno "hama_${cmd}" "$exe" " time costs:$diff"
+fi
 

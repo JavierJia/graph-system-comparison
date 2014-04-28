@@ -21,14 +21,13 @@ source $HOME/common.sh
 set -o nounset                              # Treat unset variables as an error
 
 # only for remote is ipubmed2
-export HADOOP_USER_NAME=jianfeng
+#export HADOOP_USER_NAME=jianfeng
 
 sbt_path="src/main/resources"
 $sbt_path/sbt package
 [ $? == 0 ] || exit 0
 
-sparkserver="spark://sensorium-11:7077"
-#sparkserver="spark://ipubmed2:7077"
+sparkserver="spark://sensorium-21:7077"
 jar="target/scala-2.10/compare-graphx_2.10-0.1-SNAPSHOT.jar"
 test_alg=${1:-"all"}
 input=${2:-"hdfs://ipubmed2:9000/user/jianfeng/data/sample"}
@@ -37,8 +36,8 @@ output_folder=${3:-"hdfs://ipubmed2:9000/tmp/graphX"}
 extra_sssp=1824
 extra_pagerank=5
 
-core=8      # for all cores for the whole cluster
-mem="6g"    # for one worker!
+core=64      # for all cores for the whole cluster
+mem="6800m"    # for one worker!
 
 function run_cmd {
 
