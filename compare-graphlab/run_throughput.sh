@@ -26,26 +26,40 @@ $hadoop_home/bin/hadoop fs -mkdir $output_folder
 
 fmachines="./machinefile"
 nmachines=`wc -l $fmachines | cut -d ' ' -f1`
-mpdboot -n $nmachines -f machinefile -v
 sleep 10s
 #PageRank
-for p in "001x" "005x" "01x" "05x";do
-    sleep 10
-    input="${hdfs}/data/adj/webmap${p}-split${nmachines}"
-    output="${output_folder}/`basename $input`"
-    ./run_graph_lab.sh "pagerank" $input $output
+#for p in "001x" "005x" "01x" "05x";do
+#for p in "005x" "01x" "05x";do
+for p in "005x" "01x" ;do
+#    for task in {2..3} ; do
+    for task in {2..3} ; do
+        mpdallexit
+        mpdboot -n $nmachines -f machinefile -v
+        for (( k = 1; k <= task; k++ )) ; do        
+            sleep 10
+            input="${hdfs}/data/adj/webmap${p}-split${nmachines}"
+            output="${output_folder}/`basename $input`-job${k}-of-${task}"
+            ./run_graph_lab.sh "pagerank" $input $output &
+        done
+        wait
+    done
 done
 
 #BTC
 #for input in "${hdfs}/data/adj/btc005x-split${nmachines}" "${hdfs}/data/adj/btc-split${nmachines}";do
 for input in "${hdfs}/data/adj/btc005x-split${nmachines}" ;do
-    output="${output_folder}/`basename $input`"
-    for alg in "sssp" "connected_component" "simple_undirected_triangle_count"; do
-        sleep 10
-        ./run_graph_lab.sh $alg $input $output
+    for task in {2..3} ; do
+         mpdallexit
+        mpdboot -n $nmachines -f machinefile -v
+        
+        for (( k = 1; k <= task; k++ )) ; do        
+            sleep 10
+            output="${output_folder}/`basename $input`-job${k}-of-${task}"
+            ./run_graph_lab.sh "sssp" $input $output &
+        done
+        wait
     done
 done
-mpdallexit
 
 # some make up script
 #input=${hdfs}/data/adj/webmap05x-split32

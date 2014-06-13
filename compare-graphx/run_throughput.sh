@@ -27,23 +27,40 @@ $hadoop_home/bin/hadoop fs -mkdir $output_folder
 slaves=`wc -l ./spark/conf/slaves | cut -f 1 -d ' '`
 
 #PageRank
-for p in "001x" "005x" "01x" "05x";do
-    sleep 5
-    input="${hdfs}/data/adj/webmap${p}"
-    output="${output_folder}/`basename $input`"
-    ./run.sh "PageRank" $input $output
+#for p in "001x" "005x" "01x" "05x";do
+#    for task in {2..3} ; do
+for p in "001x";do
+    for task in 1 ; do
+        ./spark/sbin/stop-all.sh
+        sleep 5s
+        ./spark/sbin/start-all.sh
+        for (( k = 1; k <= task; k++ )) ; do        
+            sleep 10
+            input="${hdfs}/data/adj/webmap${p}"
+            output="${output_folder}/`basename $input`-job${k}-of-${task}"
+            ./run.sh "PageRank" $input $output &
+        done
+        wait
+    done
 done
 
 #BTC
 #for input in "${hdfs}/data/adj/btc005x" "${hdfs}/data/adj/btc"
-for input in "${hdfs}/data/adj/btc005x" 
-do
-    for alg in "SSSP" "CC" "TC" ; do
-        sleep 5
-        output="${output_folder}/`basename $input`"
-        ./run.sh $alg $input $output
-    done
-done
+#for input in "${hdfs}/data/adj/btc005x" 
+#do
+#    for task in {2..3} ; do
+#        ./spark/sbin/stop-all.sh
+#        sleep 5s
+#        ./spark/sbin/start-all.sh
+# 
+#        for (( k = 1; k <= task; k++ )) ; do        
+#            sleep 10
+#            output="${output_folder}/`basename $input`-job${k}-of-${task}"
+#            ./run.sh "SSSP" $input $output &
+#        done
+#        wait
+#    done
+#done
 
 ## Clean up
 \rm -rf ./spark/{work,logs}

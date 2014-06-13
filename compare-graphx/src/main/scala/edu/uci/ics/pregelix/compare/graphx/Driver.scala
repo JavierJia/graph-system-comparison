@@ -121,8 +121,11 @@ object Driver {
     conf.setJars(jars)
     conf.set("spark.executor.memory", memory)
     conf.set("spark.cores.max", cores.toString)
+    conf.set("spark.scheduler.allocation.file", "/home/jianfenj/workplace/graph-system-comparison/compare-graphx/spark/conf/fairscheduler.xml")
+    conf.set("spark.scheduler.mode", "FAIR")
 
     val sc = new SparkContext(conf)
+    sc.setLocalProperty("spark.scheduler.pool", "pool1")
 
     cmd.toLowerCase() match {
       case "pagerank" => {

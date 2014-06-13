@@ -24,7 +24,7 @@
 <configuration>
 <property>
       <name>bsp.master.address</name>
-      <value>sensorium-21:4000</value>
+      <value>sensorium-1:4000</value>
       <!--value>ipubmed2:4000</value-->
       <!--value>local</value-->
       <description>The address of the bsp master server. Either the
@@ -34,7 +34,7 @@
 
     <property>
       <name>fs.default.name</name>
-      <value>hdfs://sensorium-21.ics.uci.edu:9000</value>
+      <value>hdfs://sensorium-1.ics.uci.edu:9000</value>
       <!--value>hdfs://ipubmed2.ics.uci.edu:9000</value-->
       <!--value>file:///tmp/</value-->
       <description>
@@ -51,7 +51,7 @@
  
   <property>
     <name>bsp.tasks.maximum</name>
-    <value>4</value>
+    <value>1</value>
     <description>The maximum number of BSP tasks that will be run simultaneously 
     by a groom server.</description>
   </property>
@@ -79,7 +79,7 @@
 
   <property>
     <name>bsp.child.java.opts</name>
-    <value>-Xmx2g</value>
+    <value>-Xmx8g</value>
     <description>Java opts for the groom server child processes.  
     The following symbol, if present, will be interpolated: @taskid@ is replaced 
     by current TaskID. Any other occurrences of '@' will go unchanged.
@@ -93,7 +93,7 @@
 
    <property>
     <name>hama.zookeeper.quorum</name>
-    <value>sensorium-22,sensorium-23,sensorium-24,sensorium-25,sensorium-26,sensorium-27,sensorium-28,sensorium-29,sensorium-30,sensorium-31,sensorium-32,sensorium-33,sensorium-34,sensorium-35,sensorium-36,sensorium-37</value>
+    <value>sensorium-1</value>
     <description>Comma separated list of servers in the ZooKeeper quorum.
     For example, "host1.mydomain.com,host2.mydomain.com,host3.mydomain.com".
     By default this is set to localhost for local and pseudo-distributed modes

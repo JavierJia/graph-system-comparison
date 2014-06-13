@@ -26,7 +26,9 @@ jar=../../../../target/compare-hama-0.0.1-SNAPSHOT.jar
 test_alg=${1:-"all"}
 input=${2:-"/user/jianfeng/data/sample/sample.400k.20.txt"}
 output_folder=${3:-"/tmp/hama-result"}
-parallel=64
+nnode=`wc -l ./conf/groomservers | cut -d " " -f1`
+#parallel=$(( $nnode * 4))
+parallel=$(( $nnode * 1))
 
 declare -A extra
 extra["PageRank"]="5"   # for pagerank iterations
@@ -44,9 +46,8 @@ if [ $test_alg == "all" ]; then
 else
     cmd=$test_alg
     output="${output_folder}_${cmd}"
-    filetag=`basename $input`
-    nnode=$(($parallel / 4))
-    logfile="hama.${filetag}.${cmd}.node${nnode}.log"
+    filetag=`basename $output`
+    logfile="hama.${filetag}.${cmd}.node${nnode}-task${parallel}.log"
  
     stt=$(date +"%s")
     exe="bin/hama jar $jar comparison.pregelix.hama.$cmd $input $output $parallel ${extra[$cmd]} 2>&1 | tee $logfile"

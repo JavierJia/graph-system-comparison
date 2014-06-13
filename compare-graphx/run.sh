@@ -27,7 +27,7 @@ sbt_path="src/main/resources"
 $sbt_path/sbt package
 [ $? == 0 ] || exit 0
 
-sparkserver="spark://sensorium-21:7077"
+sparkserver="spark://sensorium-1:7077"
 jar="target/scala-2.10/compare-graphx_2.10-0.1-SNAPSHOT.jar"
 test_alg=${1:-"all"}
 input=${2:-"hdfs://ipubmed2:9000/user/jianfeng/data/sample"}
@@ -36,14 +36,16 @@ output_folder=${3:-"hdfs://ipubmed2:9000/tmp/graphX"}
 extra_sssp=1824
 extra_pagerank=5
 
-core=64      # for all cores for the whole cluster
+export slaves=`wc -l ./spark/conf/slaves | cut -f 1 -d ' ' `
+core=$(( $slaves * 4 ))  
+#mem="3400m"    # for one worker!
 mem="6800m"    # for one worker!
 
 function run_cmd {
 
     cmd=$1
     extra=""
-    filetag=`basename $input`
+    filetag=`basename $output_folder`
     node=$(($core / 4))
     logfile="graphX.${filetag}.${cmd}.node${node}.log"
     [ $cmd == "PageRank" ] && extra=$extra_pagerank

@@ -25,20 +25,34 @@ output_folder="${hdfs}/result/hama"
 #$hadoop_home/bin/hadoop fs -mkdir $output_folder
 
 #PageRank
-for p in "001x" "005x" "01x" "05x";do
-    sleep 5
-    input="${hdfs}/data/adj/webmap${p}"
-    output="${output_folder}/`basename $input`"
-    ./run-hama.sh "PageRank" $input $output
-    [ $? == 0 ] || { exit -1; }
+#for p in "001x" "005x" "01x" "05x";do
+for p in "001x" "005x";do
+    for task in {2..3} ; do
+        bin/stop-bspd.sh && bin/start-bspd.sh
+        [ $? == 0 ] || { echo "hama start failed"; exit -1; }
+        sleep 10s
+        for (( k = 1; k <= task; k++ )) ; do
+            input="${hdfs}/data/adj/webmap${p}"
+            output="${output_folder}/`basename $input`-job${k}-of-${task}"
+            ./run-hama.sh "PageRank" $input $output &
+        done
+        wait
+    done
 done
 
 ##BTC
 for input in "${hdfs}/data/adj/btc005x" "${hdfs}/data/adj/btc" ;do
-    for alg in "SSSP" "TriagleCounting" "ConnectedComponent"; do
-        sleep 5
-        output="${output_folder}/`basename $input`"
-        ./run-hama.sh $alg $input $output
-        [ $? == 0 ] || { exit -1; }
+    for task in {2..3} ; do
+        bin/stop-bspd.sh && bin/start-bspd.sh
+        [ $? == 0 ] || { echo "hama start failed"; exit -1; }
+        sleep 10s
+        for (( k = 1; k <= task; k++ )) ; do
+            sleep 10
+            output="${output_folder}/`basename $input`-job${k}-of-${task}"
+            ./run-hama.sh "SSSP" $input $output &
+        done
+        wait
     done
 done
+
+bin/stop-bspd.sh
